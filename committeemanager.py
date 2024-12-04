@@ -1,7 +1,7 @@
 import sqlite3 as db
 
 def initializeDatabase():
-    sql = "CREATE TABLE IF NOT EXISTS committee( Com_id INT AUTO_INCREMENT PRIMARY, name TEXT, age int, address TEXT )"
+    sql = "CREATE TABLE IF NOT EXISTS committee( Com_id INT(4) PRIMARY KEY, name TEXT, age int(3), address TEXT )"
     con = db.connect("database\\committee.db")
     cur = con.cursor()
     cur.execute(sql)
@@ -18,3 +18,4 @@ def add(name, age, address):
     cur.close()
     con.close()
 
+initializeDatabase()
