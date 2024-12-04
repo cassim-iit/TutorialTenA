@@ -11,3 +11,10 @@ def initializeDatabase():
     con.close()
 
 initializeDatabase()
+
+def insertVoter(iitNumber, fName, lName):
+    oVoter = Voter()
+    oVoter.iitNumber = iitNumber
+    oVoter.fName = fName
+    oVoter.lName = lName
+    oVoter.save()
