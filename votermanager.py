@@ -52,3 +52,37 @@ def getAllVoters():
 def printVoterList(oVoter):
     for oVoter in oVoter:
         print(oVoter.iitNumber, oVoter.fName, oVoter.lName)
+
+def menu():
+    x = 0;
+    while (x != 9):
+        print("1. Show all voters\n"
+              "2. Add new voter\n"
+              "3. Remove voter\n"
+              "4. Update voter\n"
+              "9. Exit")
+        x = int(input("Enter your choice: "))
+        match x:
+            case 1:
+                oList = getAllVoters()
+                printVoterList(oList)
+            case 2:
+                iitNumber = int(input("Enter your iitNumber: "))
+                fName = input("Enter your first name: ")
+                lName = input("Enter your last name: ")
+                insertVoter(iitNumber, fName, lName)
+                print("Voter added successfully")
+            case 3:
+                iitNumber = input("Enter your iitNumber: ")
+                removeVoter(iitNumber)
+                print("Voter removed successfully")
+            case 4:
+                iitNumber = int(input("Enter your iitNumber: "))
+                fName = input("Enter your first name: ")
+                lName = input("Enter your last name: ")
+                updateVoter(iitNumber, fName, lName)
+                print("User updated successfully")
+
+#main for this module
+initializeDatabase()
+menu()
