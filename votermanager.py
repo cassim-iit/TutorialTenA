@@ -31,6 +31,12 @@ def updateVoter(iitNumber, fName, lName):
     oVoter.lName = lName
     oVoter.update()
 
+def getVoter(iitNumber):
+    oVoter = Voter()
+    oVoter.iitNumber = iitNumber
+    oVoter.load()
+    return oVoter
+
 def getAllVoters():
     oVoters = []
     sql = "SELECT iitNumber, fName, lName FROM voter"
