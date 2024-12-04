@@ -25,8 +25,12 @@ def removeVoter(iitNumber,):
     oVoter.delete()
 
 def updateVoter(iitNumber, fName, lName):
-    oUser = Voter()
-    oUser.iitNumber = iitNumber
-    oUser.fName = fName
-    oUser.lName = lName
-    oUser.update()
+    oVoter = Voter()
+    oVoter.iitNumber = iitNumber
+    oVoter.fName = fName
+    oVoter.lName = lName
+    oVoter.update()
+
+def printVoterList(oVoter):
+    for oVoter in oVoter:
+        print(oVoter.fName, oVoter.lName, oVoter.iitNumber)
