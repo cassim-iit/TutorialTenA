@@ -23,3 +23,10 @@ def removeVoter(iitNumber,):
     oVoter = Voter()
     oVoter.iitNumber = iitNumber
     oVoter.delete()
+
+def updateVoter(iitNumber, fName, lName):
+    oUser = Voter()
+    oUser.iitNumber = iitNumber
+    oUser.fName = fName
+    oUser.lName = lName
+    oUser.update()
