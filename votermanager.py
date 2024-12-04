@@ -18,3 +18,24 @@ def insertVoter(iitNumber, fName, lName):
     oVoter.fName = fName
     oVoter.lName = lName
     oVoter.save()
+
+def removeVoter(iitNumber,):
+    oVoter = Voter()
+    oVoter.iitNumber = iitNumber
+    oVoter.delete()
+
+def updateVoter(iitNumber, fName, lName):
+    oVoter = Voter()
+    oVoter.iitNumber = iitNumber
+    oVoter.fName = fName
+    oVoter.lName = lName
+    oVoter.update()
+
+def printVoterList(oVoter):
+    for oVoter in oVoter:
+        print(oVoter.fName, oVoter.lName, oVoter.iitNumber)
+def getVoter(iitNumber):
+    oVoter = Voter()
+    oVoter.iitNumber = iitNumber
+    oVoter.load()
+    return oVoter
