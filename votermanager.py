@@ -34,3 +34,8 @@ def updateVoter(iitNumber, fName, lName):
 def printVoterList(oVoter):
     for oVoter in oVoter:
         print(oVoter.fName, oVoter.lName, oVoter.iitNumber)
+def getVoter(iitNumber):
+    oVoter = Voter()
+    oVoter.iitNumber = iitNumber
+    oVoter.load()
+    return oVoter
