@@ -48,3 +48,7 @@ def getAllVoters():
         oVoter.lName = row[2]
         oVoters.append(Voter)
     return Voters
+
+def printVoterList(oVoter):
+    for oVoter in oVoter:
+        print(oVoter.iitNumber, oVoter.fName, oVoter.lName)
