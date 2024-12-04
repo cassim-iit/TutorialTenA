@@ -18,3 +18,8 @@ def insertVoter(iitNumber, fName, lName):
     oVoter.fName = fName
     oVoter.lName = lName
     oVoter.save()
+
+def removeVoter(iitNumber,):
+    oVoter = Voter()
+    oVoter.iitNumber = iitNumber
+    oVoter.delete()
