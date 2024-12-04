@@ -10,7 +10,6 @@ def initializeDatabase():
     cur.close()
     con.close()
 
-initializeDatabase()
 
 def insertVoter(iitNumber, fName, lName):
     oVoter = Voter()
@@ -30,6 +29,12 @@ def updateVoter(iitNumber, fName, lName):
     oVoter.fName = fName
     oVoter.lName = lName
     oVoter.update()
+
+def getVoter(iitNumber):
+    oVoter = Voter()
+    oVoter.iitNumber = iitNumber
+    oVoter.load()
+    return oVoter
 
 def getAllVoters():
     oVoters = []
