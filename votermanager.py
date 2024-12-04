@@ -1,5 +1,5 @@
 import sqlite3 as db
-
+from entity.voter import Voter
 
 def initializeDatabase():
     sql = "CREATE TABLE IF NOT EXISTS voter(iitNumber int(8) PRIMARY KEY, fName varchar(10), lName varchar(10))"
