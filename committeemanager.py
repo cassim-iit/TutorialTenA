@@ -1,7 +1,7 @@
 import sqlite3 as db
 
 def initializeDatabase():
-    sql = "CREATE TABLE IF NOT EXISTS committee( id TEXT PRIMARY KEY, name TEXT, party text, ballotNumber int)"
+    sql = "CREATE TABLE IF NOT EXISTS committee( Com_id TEXT PRIMARY KEY, name TEXT, age int, address TEXT )"
     con = db.connect("database\\committee.db")
     cur = con.cursor()
     cur.execute(sql)
@@ -10,3 +10,4 @@ def initializeDatabase():
     con.close()
 
 initializeDatabase()
+
