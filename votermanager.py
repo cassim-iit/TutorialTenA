@@ -18,3 +18,10 @@ def insertVoter(iitNumber, fName, lName):
     oVoter.fName = fName
     oVoter.lName = lName
     oVoter.save()
+
+def updateVoter(iitNumber, fName, lName):
+    oUser = Voter()
+    oUser.iitNumber = iitNumber
+    oUser.fName = fName
+    oUser.lName = lName
+    oUser.update()
