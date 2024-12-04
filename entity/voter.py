@@ -18,7 +18,7 @@ class Voter:
 
     def load(self):
         sql = "SELECT iitNumber, fName, lName FROM voter WHERE iitNumber = ?"
-        con = db.connect("database\\login.db")
+        con = db.connect("database\\voter.db")
         cur = con.cursor()
         cur.execute(sql, (self.iitNumber,))
         row = cur.fetchone()
