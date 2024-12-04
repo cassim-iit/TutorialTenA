@@ -30,3 +30,9 @@ def updateVoter(iitNumber, fName, lName):
     oUser.fName = fName
     oUser.lName = lName
     oUser.update()
+
+def getVoter(iitNumber):
+    oVoter = Voter()
+    oVoter.iitNumber = iitNumber
+    oVoter.load()
+    return oVoter
