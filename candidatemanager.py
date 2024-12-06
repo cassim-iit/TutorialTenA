@@ -83,7 +83,7 @@ def menu():
                 removeCandidate(candidateNameName)
                 print("User removed successfully")
             case 4:
-                candidateName = input("Enter your name: ")
+                candidateName = input("Enter your Name: ")
                 candidateNumber = input("Enter your number: ")
                 candidateHouse = input("Enter your house: ")
 
