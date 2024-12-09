@@ -8,7 +8,7 @@ class Candidate:
         self.candidateHouse = candidateHouse
 
 
-    def save(self):
+    def save(self ):
         sql = "INSERT INTO candidate (candidateName, candidateNumber,candidateHouse) VALUES (?, ?,?)"
         con = db.connect("database\\candidate.db")
         cur = con.cursor()
