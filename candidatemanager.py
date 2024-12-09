@@ -16,6 +16,7 @@ def insertCandidate(candidateName, CandidateNumber, CandidateHouse):
     oCandidate.candidateName = candidateName
     oCandidate.CandidateNumber = CandidateNumber
     oCandidate.CandidateHouse = CandidateHouse
+
     oCandidate.save()
 
 def removeCandidate(candidateName):
